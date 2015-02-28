@@ -23,6 +23,7 @@ class AirplanesController < ApplicationController
       )
     @airplane = Airplane.new(airplane_params)
     @airplane.save
+    flash[:notice] = "Airplane successfully added"
     redirect_to airplanes_path
   end
 
