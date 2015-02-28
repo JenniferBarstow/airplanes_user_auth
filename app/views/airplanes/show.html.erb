@@ -1,0 +1,8 @@
+<strong>Name:</strong>
+<%= @airplane.name %>
+<br>
+<strong>Pilot:</strong>
+ <%= @airplane.pilot %>
+
+ <%= link_to "edit", edit_airplane_path(@airplane) %> |
+ <%= link_to "delete", airplane_path(@airplane), method: :delete, data: {confirm: "Are you sure?"} %>

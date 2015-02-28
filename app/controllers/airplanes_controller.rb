@@ -38,7 +38,7 @@ class AirplanesController < ApplicationController
   end
 
   def destroy
-    @airplane = Airplane.find(params[:iid])
+    @airplane = Airplane.find(params[:id])
     @airplane.destroy(airplane_params)
     redirect_to airplanes_path
   end
