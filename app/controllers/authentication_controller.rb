@@ -13,8 +13,7 @@ class AuthenticationController < ApplicationController
 
   def destroy
     session.clear
-    flash[:notice] = "You have successfully logged out"
-    redirect_to root_path
+    flash[:notice] = "See ya next time!"
+    render :new
   end
-
 end
