@@ -1,0 +1,19 @@
+<h1>Edit Airplane</h1>
+
+<%= form_for @airplane do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :pilot %>
+    <%= f.text_field :pilot %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
