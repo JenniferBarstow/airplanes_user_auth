@@ -34,12 +34,14 @@ class AirplanesController < ApplicationController
       :pilot,
     )
     @airplane.update(airplane_params)
+    flash[:notice] = "Airplane was updated successfully"
     redirect_to airplanes_path
   end
 
   def destroy
     @airplane = Airplane.find(params[:id])
     @airplane.destroy
+    flash[:notice] = "Airplane was deleted"
     redirect_to airplanes_path
   end
 
